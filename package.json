@@ -2,6 +2,7 @@
 	"name": "my-app",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://hoangnganst.github.io/Quote_Machine",
 	"dependencies": {
 		"@craco/craco": "^6.2.0",
 		"@testing-library/jest-dom": "^5.11.4",
@@ -21,7 +22,9 @@
 		"start": "craco start",
 		"build": "craco build",
 		"test": "craco test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -43,6 +46,7 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "9",
+		"gh-pages": "^3.2.3",
 		"postcss": "7",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat"
 	}

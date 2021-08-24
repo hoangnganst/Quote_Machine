@@ -10,7 +10,7 @@ function App() {
 				</div>
 				<div>
 					<div className="text-xl font-medium text-black">ChitChat</div>
-					<p className="text-gray-500">You have a new message!</p>
+					<p className="text-gray-500">Hello Jessica!</p>
 				</div>
 			</div>
 		</div>
