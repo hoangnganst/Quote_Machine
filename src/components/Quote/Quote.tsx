@@ -34,7 +34,7 @@ const Quote: React.FC = () => {
 				<div id="text">
 					<p className="text-lg font-semibold">
 						<i className="fa fa-quote-left"> </i>
-						{`${quote.quote}`}
+						{` ${quote.quote}`}
 					</p>
 				</div>
 				<div id="author" className="font-medium">
