@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import { getQuote } from '../../api/Quote';
 import { QuoteDto } from '../../api/QuoteDto';
@@ -28,18 +29,40 @@ const Quote: React.FC = () => {
 		<>
 			<div
 				id="quote-box"
-				className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"
+				className="m-3 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 flex-col"
 			>
-				<div id="text">{quote.quote}</div>
-				<div id="author">{quote.author}</div>
-				<button
-					id="new-quote"
-					onClick={() => {
-						setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-					}}
-				>
-					new
-				</button>
+				<div id="text">
+					<p className="text-lg font-semibold">{`“ ${quote.quote} ”`}</p>
+				</div>
+				<div id="author" className="font-medium">
+					- <span className="text-gray-500">{quote.author}</span>
+				</div>
+				<div className="flex space-x-3 mb-4 text-sm font-medium p-2">
+					<div className="flex-auto flex space-x-3">
+						<button
+							className="p-2 flex items-center justify-center rounded-md bg-black text-white"
+							id="new-quote"
+							onClick={() => {
+								setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+							}}
+						>
+							New Quote
+						</button>
+					</div>
+					<a
+						className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-gray-400 border border-gray-300"
+						type="button"
+						aria-label="like"
+						id="tweet-quote"
+						href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${encodeURIComponent(
+							'"' + quote.quote + '" ' + quote.author
+						)}`}
+					>
+						<i className="fa fa-twitter" />
+					</a>
+				</div>
+
+				<div></div>
 			</div>
 		</>
 	);
