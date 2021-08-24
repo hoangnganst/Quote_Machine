@@ -32,7 +32,10 @@ const Quote: React.FC = () => {
 				className="m-3 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 flex-col"
 			>
 				<div id="text">
-					<p className="text-lg font-semibold">{`“ ${quote.quote} ”`}</p>
+					<p className="text-lg font-semibold">
+						<i className="fa fa-quote-left"> </i>
+						{`${quote.quote}`}
+					</p>
 				</div>
 				<div id="author" className="font-medium">
 					- <span className="text-gray-500">{quote.author}</span>
