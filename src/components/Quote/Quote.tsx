@@ -29,7 +29,7 @@ const Quote: React.FC = () => {
 		<>
 			<div
 				id="quote-box"
-				className="m-3 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 flex-col"
+				className="m-3 p-6 max-w-sm mx-auto bg-gray-100 rounded-xl shadow-md flex items-center space-x-4 flex-col "
 			>
 				<div id="text">
 					<p className="text-lg font-semibold">

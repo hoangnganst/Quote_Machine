@@ -4,7 +4,7 @@ import Quote from './components/Quote/Quote';
 
 function App() {
 	return (
-		<div className="App">
+		<div className="container mx-auto">
 			<Quote />
 		</div>
 	);
